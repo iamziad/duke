@@ -1,4 +1,4 @@
-class Main {
+class Primitives {
     public static void main(String[] args) {
         int maxInt = Integer.MAX_VALUE;
         float f = 0.5f;
