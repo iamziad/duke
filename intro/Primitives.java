@@ -7,11 +7,12 @@ class Primitives {
 
         int overflowInt1 = Integer.MAX_VALUE + 1; // will compile
         int overflowInt2 = 2147483647 + 1; // will compile
-        int overflowInt3 = 2147483648; // will crash
+ //       int overflowInt3 = 2147483648; // will crash before compile-time
         int overflowInt4 = 2_147_483_647; // underscore separator
 
         System.out.println(""+ ++f +"");
         System.out.println("Maximum integer = " + maxInt + "");
         System.out.println(isFun ? "yes" : "no");
+        System.out.println("2: "+overflowInt2+" ");
     }
 }
