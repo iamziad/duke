@@ -1,2 +1,24 @@
 #+TITLE: Taking input from user
 #+DATE: <2026-04-15 Wed>
+
+
+* How to take input from user?
+
+- في طرق كتير ناخد بيها input من الـuser في Java:
+
+*** System.in
+
+الـSystem class بيقدم object اسمه in من نوع PrintStream بيقدر يخلينا ناخد input من الuser, ولكن الobject ده مش محبب استخدامه لانه التعامل معاه صعب و معقد
+
+*** System.console
+
+الSystem class بيقدم برضو object تاني اسمه console, وده التعامل معاه سهل جدا وبيقرا سطر واحد الuser وبيرجعه في صورة String
+ودي انسب طريقة لو عاوز تاخد password من الuser
+
+*** Command Line Arguments
+
+برضو زي لغات كتير, Java بتدعم الcommand line arguments اللي بتتبعت وانت بتنادي البرنامج
+
+*** Scanner
+
+دي اسهل طريقة تاخد بيها input من الـuser ولكنها بطيئة لانها بتعتمد علي الـregex في عمل parse للـinput
