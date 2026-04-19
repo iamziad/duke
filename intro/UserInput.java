@@ -1,7 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class userInput {
+public class UserInput {
     public static void main(String[] args) {
         int currentYear = 2026;
 

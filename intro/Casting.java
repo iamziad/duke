@@ -14,7 +14,7 @@ class Casting {
         */
 
         int i = Short.MAX_VALUE; // 32767
-        short s = (short)(i + 1); /* compiles, because it's guaranteed that the expression value won't exceed the short's range,
+        short s = (short) (i + 1); /* compiles, because it's guaranteed that the expression value won't exceed the short's range,
                                      even if the value is not known at compile time */
 
         System.out.println(s);
