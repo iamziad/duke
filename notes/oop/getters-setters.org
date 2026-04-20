@@ -1,0 +1,40 @@
+#+TITLE: Encapsulation
+
+** Getters and Setters
+
+/getters/ and /setters/ allows us to validate and control the data of the class, preventing users from accesing the data fields *directly* and force them to go through a *controled* way of setting up the data on the object. and this is the point behind *Encapsulation*
+
+#+BEGIN_SRC java
+
+  public class Car {
+      private String brand;
+
+      // Validation and Control
+      public void setBrand(String brand) {
+          if (brand == null) brand = "Unknown";
+
+          String lowerCaseBrand = brand.toLowerCase();
+
+          switch (lowerCaseBrand) {
+              case "porsche", "bmw", "mercedes" -> this.brand = brand;
+              default -> this.brand = "Unsupported";
+          }
+      }
+  }
+
+#+END_SRC
+
+
+-----------------------------------------------------------------------------------
+
+** /this/ keyword
+
+The /this/ keyword is just a reference to current instance, to differentiate between the actual data member and /setter argument/ in case have the same name
+
+#+BEGIN_SRC java
+
+  brand = brand; // suspicious
+
+  this.brand = brand // clean and clear
+
+#+END_SRC

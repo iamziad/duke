@@ -1,4 +1,4 @@
-#+TITLE: The organization of class in Java
+#+TITLE: The organization of classes in Java
 
 * Grouping
 
@@ -23,7 +23,7 @@ Accessible *by anyone at everywhere*
 
 /Inheritance/: cross-package-inheritance
 
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 *** none (no access modifier)
 
@@ -35,7 +35,7 @@ Accessible only to classes *within the same package*
 - *sub classes* from other packages cannot inherit *package-private* members
 
 
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 *** private
 
@@ -44,7 +44,7 @@ Accessible *only inside the class*, even instances of that class cannot access i
 /Inheritance/: cannot be inherited
 
 
---------------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 *** protected
 
