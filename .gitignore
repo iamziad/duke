@@ -5,4 +5,5 @@
 *.ipr
 out/
 
-**/Main.java
+Main.java
+*.class
