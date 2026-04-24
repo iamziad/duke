@@ -1,6 +1,6 @@
 #+TITLE: The organization of classes in Java
 
-* Grouping
+** Grouping
 
 When you create any *top-level* class, it will be created inside the *default package*
 
@@ -14,7 +14,7 @@ Packages is considered a *logical grouping* because it groups classes under a sp
 and it also considered as *physical grouping*, because each package is a path of folders and files in the project
 
 
-* Java's Access Modifers
+** Java's Access Modifers
 
 
 *** public (world-readable)
@@ -46,13 +46,17 @@ Accessible *only inside the class*, even instances of that class cannot access i
 
 ---------------------------------------------------------------------------
 
-*** protected
+*** protected (package-private with cross-package inheritance)
 
 The *protected* access modifier has two faces:
 
-- *within the same package*: it behaves like *public*, so there's no difference between it and *none (package-private)*
+- *within the same package*:
+  - it behaves like *public*, so there's no difference between it and *none (package-private)*
 
-- *within other packages*: it behaves like a *inheritable private*, meaning it behaves like a private member which is accessible only inside the class, but at the same time it's inheritable and *SubClasses within other packages can inherit it but they will inherit it as a private member*
+- *within other packages*:
+  - it behaves like a *private inheritance*, meaning it behaves like a private member which is accessible only inside the subclass, but at the same time it's inheritable and *SubClasses within other packages can inherit it but they will inherit it as a private member*.
+
+  - *protected fields* are accissbile from *subclasses* only outside the package.
 
 /Inheritance/: corss-package-inheritance for *sub classes*
 

@@ -5,15 +5,34 @@ public class Car {
     private int doors;
     private boolean convertable;
 
+    public Car() {
+        this("Unkown", "White", "Unknown", 4, false);
+        System.out.println("Empty car constructor called");
+    }
+
+    public Car(String brand, String color, String model, int doors, boolean convertable) {
+        System.out.println("Args constructor called");
+
+        this.brand = validateBrand(brand);
+        this.model = model;
+        this.color = color;
+        this.doors = doors;
+        this.convertable = convertable;
+    }
+
+    private String validateBrand(String brand) {
+        String lowerCaseBrand = brand.toLowerCase();
+
+        return switch (lowerCaseBrand) {
+            case "porsche", "bmw", "mercedes" -> this.brand = brand;
+            default -> this.brand = "Unsupported";
+        };
+    }
+
     public void setBrand(String brand) {
         if (brand == null) brand = "Unknown";
 
-        String lowerCaseBrand = brand.toLowerCase();
-
-        switch (lowerCaseBrand) {
-            case "porsche", "bmw", "mercedes" -> this.brand = brand;
-            default -> this.brand = "Unsupported";
-        }
+        this.brand = validateBrand(brand);
     }
 
     public void setColor(String color) {

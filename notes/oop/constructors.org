@@ -1,0 +1,25 @@
+#+TITLE: Constructors
+
+*** Note: 1
+
+Whenever a class is created, Java *implicitly* creates a constructor for it, unless you explicitly defined one.
+
+
+*** Note: 2
+
+Classes in Java can be *overloaded*, and can be *chained* with /this()/ function, meaning a constructor can call other constructors.
+
+The /this()/ can infer which Constructor you want to call based on the *parameters*.
+
+- If you use /this()/ function, it must be the *first line* in the *constructor*.
+
+
+*** Note: 3
+
+It's a *better practice* to not use /getters/ and /setters/ inside the *constructor*, and instead access the fields *directly*, because of many reasons:
+
+- /final/ data members cannot be modified by /setters/, only the *constructor* can modify them.
+
+- When the /setters/ are called in the *constructor* they can modify /null/ or uninitialized variables.
+
+- There are many other cases that you would avoid calling any function that modify/read the state of the object inside the *constructor*.
